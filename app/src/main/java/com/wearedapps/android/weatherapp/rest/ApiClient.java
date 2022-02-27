@@ -19,7 +19,6 @@ public class ApiClient {
 
         return new Retrofit.Builder()
                 .baseUrl("https://weatherdbi.herokuapp.com/data/weather/")
-//                .baseUrl("pro.openweathermap.org/data/2.5/forecast/hourly")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
@@ -43,4 +42,5 @@ public class ApiClient {
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         return httpLoggingInterceptor;
     }
+
 }
