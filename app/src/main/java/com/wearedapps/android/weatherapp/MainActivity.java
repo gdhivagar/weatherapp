@@ -112,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
             weatherAdapter = new WeatherAdapter(this, nextDaysItemArrayList, nextDaysItemClickListener);
             recyclerLocation.setLayoutManager(gridLayoutManager);
             recyclerLocation.setAdapter(weatherAdapter);
+        } else {
+            Toast.makeText(this, "Invalid query", Toast.LENGTH_SHORT).show();
         }
     }
 
